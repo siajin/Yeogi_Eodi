@@ -22,7 +22,7 @@ const PrintRoute = ({ selectedRoute }) => {
 
 const PrintEachRouteUnit = ({ unit }) => {
     return (
-        <div className="PrintEachRouteUnit" onClick={() => { alert() }}>
+        <div className="PrintEachRouteUnit" onClick={() => { alert('개발미완료') }}>
             <div className="iconWrapper">
                 <div className="f1"><BsCircleFill /></div>
                 <div className="line" />
