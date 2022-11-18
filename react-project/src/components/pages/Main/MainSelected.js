@@ -4,7 +4,7 @@ import './MainSelected.scss';
 const MainSelected = ({ selectedRoute, setSelected }) => {
     return (
         <div>
-            <button onClick={() => { setSelected(-1) }}>back</button>
+            <button onClick={() => { setSelected(-1) }}>처음으로 돌아가기</button>
             <PrintRoute selectedRoute={selectedRoute} />
         </div>
     )
@@ -22,7 +22,7 @@ const PrintRoute = ({ selectedRoute }) => {
 
 const PrintEachRouteUnit = ({ unit }) => {
     return (
-        <div className="PrintEachRouteUnit">
+        <div className="PrintEachRouteUnit" onClick={() => { alert() }}>
             <div className="iconWrapper">
                 <div className="f1"><BsCircleFill /></div>
                 <div className="line" />
