@@ -1,3 +1,6 @@
+import { BsCircleFill } from "react-icons/bs";
+import './MainSelected.scss';
+
 const MainSelected = ({ selectedRoute, setSelected }) => {
     return (
         <div>
@@ -9,7 +12,7 @@ const MainSelected = ({ selectedRoute, setSelected }) => {
 
 const PrintRoute = ({ selectedRoute }) => {
     return (
-        <div>
+        <div className="PrintRoute">
             {
                 selectedRoute.eachUnits.map((unit, i) => { return <PrintEachRouteUnit unit={unit} key={i} /> })
             }
@@ -19,8 +22,17 @@ const PrintRoute = ({ selectedRoute }) => {
 
 const PrintEachRouteUnit = ({ unit }) => {
     return (
-        <div>
-            a
+        <div className="PrintEachRouteUnit">
+            <div className="iconWrapper">
+                <div className="f1"><BsCircleFill /></div>
+                <div className="line" />
+                <div className="f2"><BsCircleFill /></div>
+            </div>
+            <div className="textWrapper">
+                <div className="b3">{unit.departure}</div>
+                <div className="empty" />
+                <div className="b4">{unit.destination}</div>
+            </div>
         </div>
     )
 }

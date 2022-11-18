@@ -1,4 +1,16 @@
+.title {
+    padding: 50px;
+    border-bottom: 0.1px solid black;
+    text-align: center;
+}
+
 .EachRoute {
     border-bottom: 0.1px solid black;
-    padding: 8vh;
+    padding: 15px;
+}
+
+.addRoute {
+    padding: 50px;
+    border-bottom: 0.1px solid black;
+    text-align: center;
 }

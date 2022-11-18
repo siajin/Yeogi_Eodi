@@ -5,6 +5,8 @@ import Main from './components/pages/Main/Main';
 
 const App = () => {
 
+  // 샘플데이터
+
   let routes = [
     {
       name: 'route1',
@@ -12,14 +14,20 @@ const App = () => {
         {
           type: 'subway',
           num: '5',
-          deparature: '마천',
-          destinaion: '답십리',
+          departure: '마천',
+          destination: '답십리',
         },
         {
           type: 'bus',
           num: '420',
           departure: '답십리역.동부시장',
-          destinaion: '서울시립대입구',
+          destination: '서울시립대입구',
+        },
+        {
+          type: 'bus',
+          num: '420',
+          departure: '답십리역.동부시장',
+          destination: '서울시립대입구',
         },
       ]
     },
@@ -30,7 +38,7 @@ const App = () => {
           type: 'bus',
           num: '3315',
           departure: '마천청소년수련관',
-          destinaion: '송파구청.방이맛골',
+          destination: '송파구청.방이맛골',
         },
       ]
     }
