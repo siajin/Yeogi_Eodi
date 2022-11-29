@@ -12,7 +12,7 @@ const AddRoute = () => {
                     <button className={(type == 'bus') ? 'selected' : ''} onClick={() => setType('bus')}>버스</button>
                     <button className={(type == 'subway') ? 'selected' : ''} onClick={() => setType('subway')}>지하철</button>
                 </div>
-                <input placeholder='🔍노선번호검색' />
+                <input placeholder='🔍노선번호입력' />
         </div>
     )
 }

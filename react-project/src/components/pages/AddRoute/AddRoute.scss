@@ -5,23 +5,40 @@
     }
 
     .buttonWrapper {
+        box-sizing: border-box;
         height: 30px;
         display: flex;
 
         >* {
             flex: 1;
+            box-sizing: border-box;
             border: 2px solid black;
         }
+
         .selected {
             border: 2px solid red;
-            background-color: rgb(157, 114, 114)
+            background-color: rgb(157, 114, 114);
         }
 
     }
 
     input {
+        display: inline-block;
+        border: none;
+        padding-left: 0;
+        padding-right: 0;
         width: 100%;
+        margin: 0px;
         height: 25px;
+        border-bottom: 0.1px solid;
+    }
+
+    input::placeholder {
+        color: black;
+    }
+
+    input:focus {
+        outline: none;
     }
 
 }
