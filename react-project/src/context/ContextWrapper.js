@@ -1,16 +1,11 @@
-import "./App.css";
-import { Routes, Route, Link } from "react-router-dom";
-import Main from "./pages/Main";
-import AddRoute from "./components/pages/AddRoute/AddRoute";
-import Nav from "./components/Nav";
-import SettingRoute from "./pages/SettingRoute";
+import React, { useState } from "react";
+import GlobalContext from "./GlobalContext";
 
-const App = () => {
-  // 샘플데이터
-  let routes = [
+export default function ContextWrapper(props) {
+  const [userPaths, setUserPaths] = useState([
     {
       name: "집->시립대1",
-      eachUnits: [
+      routes: [
         {
           type: "subway",
           num: "5",
@@ -24,10 +19,11 @@ const App = () => {
           destination: "서울시립대입구",
         },
       ],
+      id: "11",
     },
     {
       name: "집->시립대2",
-      eachUnits: [
+      routes: [
         {
           type: "subway",
           num: "5",
@@ -41,10 +37,11 @@ const App = () => {
           destination: "회기",
         },
       ],
+      id: "12",
     },
     {
       name: "집->방산고",
-      eachUnits: [
+      routes: [
         {
           type: "bus",
           num: "3315",
@@ -52,19 +49,18 @@ const App = () => {
           destination: "송파구청.방이맛골",
         },
       ],
+      id: "13",
     },
-  ];
+  ]);
 
   return (
-    <div className="App">
-      <Nav />
-      <Routes>
-        <Route path="/" element={<Main />} />
-        <Route path="/settingRoute/:id" element={<SettingRoute />} />
-        <Route path="addroute" element={<AddRoute />} />
-      </Routes>
-    </div>
+    <GlobalContext.Provider
+      value={{
+        userPaths,
+        setUserPaths,
+      }}
+    >
+      {props.children}
+    </GlobalContext.Provider>
   );
-};
-
-export default App;
+}
