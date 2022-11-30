@@ -1,7 +1,7 @@
 import "./App.css";
 import { Routes, Route, Link } from "react-router-dom";
 import Main from "./pages/Main";
-import AddRoute from "./components/pages/AddRoute/AddRoute";
+import AddRoute from "./components/pages/AddRoute";
 import Nav from "./components/Nav";
 import SettingRoute from "./pages/SettingRoute";
 

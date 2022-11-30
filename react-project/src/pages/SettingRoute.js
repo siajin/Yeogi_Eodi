@@ -8,15 +8,12 @@ export default function SettingRoute() {
   const navigate = useNavigate();
   const params = useParams();
   const nowPath = userPaths.find(({ id }) => id === params.id);
-  console.log(nowPath);
+
   return (
     <div className="settingRoute">
       <div>{params.id}</div>
-      <div className="PrintRoute">
-        {nowPath.routes.map((route, key) => (
-          <PrintRoute route={route} key={key} />
-        ))}
-      </div>
+      <PrintRoute path={nowPath} />
+      <button>+</button>
     </div>
   );
 }
