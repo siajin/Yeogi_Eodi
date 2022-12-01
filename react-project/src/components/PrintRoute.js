@@ -6,10 +6,11 @@ export default function PrintRoutes({ path }) {
   const { userPaths, setUserPaths } = useContext(GlobalContext);
   function deleteRoute(idx) {
     path.routes.splice(idx, 1);
-    console.log(path);
     var paths = userPaths.filter(({ id }) => id !== path.id);
-    console.log([...paths, path]);
-    setUserPaths([...paths, path]);
+    const resPaths = [...paths, path].sort(
+      (a, b) => Number(a.id) - Number(b.id)
+    );
+    setUserPaths(resPaths);
   }
 
   return (
