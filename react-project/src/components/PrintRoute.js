@@ -12,6 +12,7 @@ export default function PrintRoutes({ path }) {
     );
     setUserPaths(resPaths);
   }
+  console.log(path);
 
   return (
     <div className="PrintRoute">
@@ -27,9 +28,9 @@ export default function PrintRoutes({ path }) {
             </div>
           </div>
           <div className="textWrapper">
-            <div className="b3">{route.departure}</div>
+            <div className="b3">{route.startStNm}</div>
             <div className="empty" />
-            <div className="b4">{route.destination}</div>
+            <div className="b4">{route.endStNm}</div>
           </div>
           <button onClick={() => deleteRoute(i)}>-</button>
         </div>

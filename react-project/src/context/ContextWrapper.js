@@ -7,7 +7,7 @@ export default function ContextWrapper(props) {
   const getUserPaths = localStorage.getItem("userPaths");
 
   useEffect(() => {
-    if (getUserPaths && userPaths.length === 0) {
+    if (getUserPaths) {
       setUserPaths(JSON.parse(getUserPaths));
     } else {
       localStorage.setItem(
@@ -28,6 +28,7 @@ export default function ContextWrapper(props) {
                 endStOrd: "45",
               },
             ],
+            id: "11",
           },
         ])
         // JSON.stringify([

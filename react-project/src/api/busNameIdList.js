@@ -1,4 +1,4 @@
-export default busNameIdLsit = [
+export const busNameIdList = [
   { name: "0017", id: "100100124" },
   { name: "01", id: "100100001" },
   { name: "0411", id: "104000012" },

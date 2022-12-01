@@ -8,7 +8,7 @@ export default function SettingRoute() {
   const navigate = useNavigate();
   const params = useParams();
   const nowPath = userPaths.find(({ id }) => id === params.id);
-
+  console.log(userPaths);
   return (
     <div className="settingRoute">
       <div>{params.id}</div>
