@@ -5,14 +5,15 @@ import PrintRoutes from "../components/PrintRoute";
 import { useNavigate } from "react-router";
 import "./MainSelected.scss";
 import "./MainDefault.scss";
+import "./Main.scss";
 
 export default function Main() {
-  const { userPaths, setUserPaths } = useContext(GlobalContext);
+  const { userPaths, setUserPaths, setModalObj } = useContext(GlobalContext);
   const navigate = useNavigate();
   console.log(userPaths);
   return (
     <div className="main">
-      <div className="routes">
+      <div className="paths">
         {userPaths.map((path, i) => (
           <div
             className="path"
@@ -34,9 +35,10 @@ export default function Main() {
       </div>
       <div className="MainDefault">
         <div
-          className="addRoute"
+          className="addPath"
           onClick={() => {
-            navigate("/addroute");
+            setModalObj({ modal: "start" });
+            navigate("/addPath");
           }}
         >
           +

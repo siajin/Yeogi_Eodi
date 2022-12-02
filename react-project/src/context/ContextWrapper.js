@@ -3,7 +3,7 @@ import GlobalContext from "./GlobalContext";
 
 export default function ContextWrapper(props) {
   const [userPaths, setUserPaths] = useState([]);
-
+  const [modalObj, setModalObj] = useState({});
   const getUserPaths = localStorage.getItem("userPaths");
 
   useEffect(() => {
@@ -96,6 +96,8 @@ export default function ContextWrapper(props) {
       value={{
         userPaths,
         setUserPaths,
+        modalObj,
+        setModalObj,
       }}
     >
       {props.children}
