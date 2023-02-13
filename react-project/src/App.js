@@ -1,7 +1,7 @@
 import "./App.css";
-import { Routes, Route, Link } from "react-router-dom";
+import { Routes, Route } from "react-router-dom";
 import Main from "./pages/Main";
-import AddPath from "./components/AddPath";
+import AddPath from "./pages/AddPath";
 import Nav from "./components/Nav";
 import SettingRoute from "./pages/SettingRoute";
 import { useContext } from "react";

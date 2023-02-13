@@ -1,5 +1,5 @@
 import { useState } from "react";
-import "./AddPath.scss";
+import "../static/AddPath.scss";
 import { busNameIdList } from "../api/busNameIdList";
 import { subNameIdList } from "../api/subNameIdList";
 import { useEffect } from "react";
