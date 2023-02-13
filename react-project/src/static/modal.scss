@@ -1,0 +1,27 @@
+.bgModal {
+  position: fixed;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  width: 100%;
+  background-color: rgba(128, 128, 128, 0.347);
+  z-index: 5;
+}
+.startModal {
+  position: fixed;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: rgb(255, 255, 255);
+  width: 17rem;
+  height: 12rem;
+}
+
+.buttons {
+  display: flex;
+  flex-direction: row;
+  width: 7rem;
+  justify-content: space-between;
+}

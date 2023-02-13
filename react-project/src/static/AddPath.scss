@@ -1,0 +1,66 @@
+.AddPath {
+  .title {
+    padding: 30px;
+    text-align: center;
+  }
+
+  .buttonWrapper {
+    box-sizing: border-box;
+    height: 30px;
+    display: flex;
+
+    > * {
+      flex: 1;
+      box-sizing: border-box;
+      border: 2px solid black;
+    }
+
+    .selected {
+      border: 2px solid red;
+      background-color: rgb(157, 114, 114);
+    }
+  }
+
+  input {
+    display: inline-block;
+    border: none;
+    padding-left: 0;
+    padding-right: 0;
+    width: 100%;
+    margin: 0px;
+    height: 25px;
+    border-bottom: 0.1px solid;
+  }
+
+  input::placeholder {
+    color: black;
+  }
+
+  input:focus {
+    outline: none;
+  }
+  .busNameList > div,
+  .busStList > div,
+  .subNameList > div,
+  .subStList > div {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 0.7rem 1rem 0.7rem 0.3rem;
+    font-size: 1.5rem;
+    border-bottom: 1px solid black;
+  }
+  .busNameList > div:hover,
+  .busStList > div:hover,
+  .subNameList > div:hover,
+  .subStList > div:hover {
+    background-color: rgb(229, 229, 229);
+    cursor: pointer;
+  }
+
+  .busStList {
+    .startSt {
+      background-color: yellow;
+    }
+  }
+}
